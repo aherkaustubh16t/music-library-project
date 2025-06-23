@@ -29,21 +29,22 @@ This project showcases:
 
 ## 🏗️ Folder Structure
 
+<pre>
 music-library-project/
-├── main-app/ # Main Container App
-│ ├── public/
-│ ├── src/
-│ │ ├── context/ # Auth context
-│ │ ├── pages/ # Login, Dashboard
-│ │ └── ...
-│ └── vite.config.js
-├── music-library-app/ # Microfrontend Remote App
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ └── songs.js
-│ └── vite.config.js
-
+├── main-app/               # Main Container App
+│   ├── public/
+│   ├── src/
+│   │   ├── context/        # Auth context
+│   │   ├── pages/          # Login, Dashboard
+│   │   └── ...
+│   └── vite.config.js
+├── music-library-app/      # Microfrontend Remote App
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   └── songs.js
+│   └── vite.config.js
+</pre>
 
 ---
 
