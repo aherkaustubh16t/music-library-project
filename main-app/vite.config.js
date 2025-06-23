@@ -9,7 +9,7 @@ export default defineConfig({
     federation({
       name: 'mainApp',
       remotes: {
-        musicApp: 'https://music-library-project-7c57.vercel.app/remoteEntry.js',
+        musicApp: 'https://music-library-project-7c57.vercel.app/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom']
     }),
