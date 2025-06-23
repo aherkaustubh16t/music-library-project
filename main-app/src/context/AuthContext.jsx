@@ -8,10 +8,20 @@ export const AuthProvider = ({ children }) => {
     return stored ? JSON.parse(stored) : null;
   });
 
-  const login = (role) => {
-    const mockJWT = { role, token: "mock-token-123" };
-    setUser(mockJWT);
-    localStorage.setItem("authUser", JSON.stringify(mockJWT));
+  const login = (username, password) => {
+    const users = {
+      admin: "admin123",
+      user: "user123",
+    };
+
+    if (users[username] && users[username] === password) {
+      const mockJWT = { role: username, token: "mock-token-123" };
+      setUser(mockJWT);
+      localStorage.setItem("authUser", JSON.stringify(mockJWT));
+      return { success: true };
+    } else {
+      return { success: false, message: "Invalid username or password" };
+    }
   };
 
   const logout = () => {
