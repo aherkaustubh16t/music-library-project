@@ -1,72 +1,75 @@
-🎵 Music Library Microfrontend App
-🚀 Live Demo
-Main App (Container): https://main-app.vercel.app
+# 🎵 Music Library Microfrontend App
 
-Music Library (Remote App): https://music-library.vercel.app
+## 🚀 Live Demo
 
-👤 Demo Credentials
-Role	Username	Password	Access Description
-Admin	admin	admin123	Add/Delete songs, full dashboard access
-User	user	user123	View songs, filter and search functionality
+- **Main App (Container):** [https://main-app.vercel.app](https://main-app.vercel.app)  
+- **Music Library (Remote App):** [https://music-library.vercel.app](https://music-library.vercel.app)
 
-🧩 Project Overview
-This project demonstrates:
+---
 
-🎧 A full-featured Music Library UI
+## 👤 Demo Credentials
 
-🧱 Micro Frontend Architecture using Module Federation
+| Role  | Username | Password  | Access Description                          |
+|-------|----------|-----------|---------------------------------------------|
+| Admin | `admin`  | `admin123`| Add/Delete songs, full dashboard access     |
+| User  | `user`   | `user123` | View songs, filter/search only              |
 
-🔐 Basic Authentication with Role-Based Access
+---
 
-⚙️ Built using React, Vite, TailwindCSS, and Context API
+## 🧩 Project Overview
 
-🏗️ Folder Structure
-csharp
-Copy
-Edit
+This project showcases:
+
+- 🎧 A full-featured Music Library UI  
+- 🧱 Micro Frontend Architecture using **Module Federation**  
+- 🔐 Basic authentication and role-based access  
+- ⚙️ Built with **React**, **Vite**, **TailwindCSS**, and **Context API**  
+
+---
+
+## 🏗️ Folder Structure
+
 music-library-project/
-├── main-app/               # Main Container App
-│   ├── public/
-│   ├── src/
-│   │   ├── context/        # Authentication context
-│   │   ├── pages/          # Login, Dashboard
-│   └── vite.config.js
-├── music-library-app/      # Microfrontend Remote App
-│   ├── public/
-│   ├── src/
-│   │   ├── components/     # SongItem, SongLibrary
-│   │   └── songs.js        # Static song data
-│   └── vite.config.js
-🛠️ How to Run Locally
-Clone the repository
+├── main-app/ # Main Container App
+│ ├── public/
+│ ├── src/
+│ │ ├── context/ # Auth context
+│ │ ├── pages/ # Login, Dashboard
+│ │ └── ...
+│ └── vite.config.js
+├── music-library-app/ # Microfrontend Remote App
+│ ├── public/
+│ ├── src/
+│ │ ├── components/
+│ │ └── songs.js
+│ └── vite.config.js
 
-bash
-Copy
-Edit
-git clone https://github.com/aherkaustubh16t/music-library-project.git
-cd music-library-project
-Install dependencies for both apps
 
-bash
-Copy
-Edit
-# In one terminal
+---
+
+## 🛠️ How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/aherkaustubh16t/music-library-project.git
+   cd music-library-project
+
+2. **Install dependencies for both apps**
+# Terminal 1: Main App
 cd main-app
 npm install
 
-# In another terminal
+# Terminal 2: Music Library App
 cd ../music-library-app
 npm install
-Run both apps
 
-bash
-Copy
-Edit
-# Terminal 1: Main App on http://localhost:5173
+3. **Run both apps locally**
+# Terminal 1: Run Main App (port 5173)
 npm run dev
 
-# Terminal 2: Music Library App on http://localhost:5001
+# Terminal 2: Run Music Library App (port 5001)
 npm run dev
+
 ☁️ Deployment (Vercel)
 Main App
 Build Command: npm run build
@@ -78,51 +81,41 @@ Build Command: npm run build
 
 Output Directory: dist
 
-Exposed Module: ./SongLibrary
+Exposes: ./SongLibrary
 
-Ensure remote URL is correctly referenced in the main app's vite.config.js:
-
-js
-Copy
-Edit
+In vite.config.js of the main app, ensure this remote reference:
 remotes: {
   musicApp: "https://music-library.vercel.app/assets/remoteEntry.js"
 }
-🔐 Authentication Logic
-Authentication is handled using Context API and localStorage.
-Simple role-based system with hardcoded users:
 
-js
-Copy
-Edit
-// Inside AuthContext
+🔐 How Authentication Works
+Authentication is handled using Context API and localStorage.
+
+Simple hardcoded login system:
+// Example in AuthContext
 const users = {
   admin: "admin123",
   user: "user123"
 };
-When logged in, a mock JWT is stored in localStorage:
 
-json
-Copy
-Edit
+After login, a mock JWT is saved in localStorage:
 { "role": "admin", "token": "mock-token-123" }
-🧱 Micro Frontend Architecture
-Implemented using @originjs/vite-plugin-federation.
 
-The main app loads the SongLibrary component from the remote app.
+🧱 How Micro Frontend Works
+Built using @originjs/vite-plugin-federation
 
-Seamless integration allows the main app to stay modular and scalable.
+The main app dynamically loads SongLibrary from the remote app
+
+Makes the system scalable and modular
 
 💡 Features
 🎶 Add/Delete songs (admin only)
 
-🔍 Filter, Search, and Sort
+🔍 Filter, Search, Sort songs
 
-🎨 Modern UI with TailwindCSS
+🎨 Clean responsive UI with TailwindCSS
 
-✨ Role-based login experience
-
-🧱 Module Federation setup with Vite
+✨ Role-based access control
 
 📦 Tech Stack
 React
@@ -131,16 +124,16 @@ Vite
 
 TailwindCSS
 
-Context API
-
 Module Federation
+
+Context API
 
 LocalStorage
 
 🙌 Author
 Kaustubh Aher
 📧 aherkaustubh16t@gmail.com
-🔗 GitHub: @aherkaustubh16t
+🔗 https://github.com/aherkaustubh16t
 
 📝 License
-This project is intended for educational and demo purposes only.
+This project is for educational/demo purposes only.
