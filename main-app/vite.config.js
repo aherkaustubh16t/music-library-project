@@ -9,7 +9,7 @@ export default defineConfig({
     federation({
       name: 'mainApp',
       remotes: {
-        musicApp: 'http://localhost:5001/assets/remoteEntry.js', // ✅ REMOVE 'musicApp@'
+        musicApp: 'https://music-library-project-7c57.vercel.app/remoteEntry.js', // ✅ REMOVE 'musicApp@'
       },
       shared: ['react', 'react-dom']
     }),
