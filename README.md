@@ -2,8 +2,8 @@
 
 ## 🚀 Live Demo
 
-- **Main App (Container):** [https://main-app.vercel.app](https://main-app.vercel.app)  
-- **Music Library (Remote App):** [https://music-library.vercel.app](https://music-library.vercel.app)
+- **Main App (Container):** [https://music-library-project-qhqe.vercel.app/](https://music-library-project-qhqe.vercel.app/)  
+- **Music Library (Remote App):** [https://music-library-project-7c57.vercel.app/](https://music-library-project-7c57.vercel.app/)
 
 ---
 
